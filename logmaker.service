@@ -1,0 +1,13 @@
+[Unit]
+Description="Writes to /tmp/logmaker.log every 7 seconds." 
+
+[Service]
+User=cyrus
+WorkingDirectory=/usr/local/bin/
+ExecStart=/usr/local/bin/logmaker.sh
+Restart=no
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+
